@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VIDAVIEW by Ducs</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#fff;
+color:#222;
+}
+
+:root{
+--primary:#25B8C8;
+--secondary:#179CAC;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+header{
+position:fixed;
+width:100%;
+background:#fff;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 0;
+}
+
+.logo{
+height:70px;
+}
+
+.menu{
+display:flex;
+gap:30px;
+}
+
+.menu a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+.wa-btn{
+background:var(--primary);
+color:white;
+padding:12px 24px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,90,100,.65),rgba(0,90,100,.65)),
+url('images/kamar.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+color:white;
+}
+
+.hero-content{
+max-width:650px;
+}
+
+.hero h1{
+font-size:72px;
+line-height:1;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+margin:20px 0;
+}
+
+.price{
+font-size:48px;
+font-weight:700;
+color:#4de0ef;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:15px 30px;
+background:var(--primary);
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+}
+
+section{
+padding:80px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:36px;
+color:var(--primary);
+margin-bottom:40px;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:#fff;
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.card h3{
+margin-top:10px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+}
+
+.price-box{
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+color:white;
+padding:40px;
+border-radius:20px;
+text-align:center;
+max-width:450px;
+margin:auto;
+}
+
+.price-box h2{
+font-size:50px;
+}
+
+.location{
+background:#f5fcfd;
+padding:30px;
+border-radius:20px;
+}
+
+footer{
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+color:white;
+padding:50px 20px;
+text-align:center;
+}
+
+.floating-wa{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:15px 25px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+@media(max-width:768px){
+
+.menu{
+display:none;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.price{
+font-size:36px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+<div class="container">
+<nav>
+
+<img src="images/logo.png" class="logo">
+
+<div class="menu">
+<a href="#home">Beranda</a>
+<a href="#fasilitas">Fasilitas</a>
+<a href="#galeri">Galeri</a>
+<a href="#harga">Harga</a>
+<a href="#lokasi">Lokasi</a>
+</div>
+
+<a class="wa-btn"
+href="https://wa.me/6281649508066"
+target="_blank">
+Booking WhatsApp
+</a>
+
+</nav>
+</div>
+</header>
+
+<section class="hero" id="home">
+
+<div class="container">
+<div class="hero-content">
+
+<h1>VIDAVIEW<br>by Ducs</h1>
+
+<p>
+Premium Apartment Stay in Makassar
+dengan fasilitas lengkap dan lokasi strategis.
+</p>
+
+<div class="price">
+Rp350.000 / malam
+</div>
+
+<a href="https://wa.me/6281649508066"
+target="_blank"
+class="btn">
+Booking Sekarang
+</a>
+
+</div>
+</div>
+
+</section>
+
+<section id="fasilitas">
+
+<div class="container">
+
+<h2 class="section-title">Fasilitas</h2>
+
+<div class="features">
+
+<div class="card">
+<h3>🏊 Kolam Renang</h3>
+</div>
+
+<div class="card">
+<h3>🏋️ Gym</h3>
+</div>
+
+<div class="card">
+<h3>📶 WiFi & Netflix</h3>
+</div>
+
+<div class="card">
+<h3>❄️ AC</h3>
+</div>
+
+<div class="card">
+<h3>🍽️ Dapur Lengkap</h3>
+</div>
+
+<div class="card">
+<h3>🔐 Keamanan 24 Jam</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="galeri">
+
+<div class="container">
+
+<h2 class="section-title">Galeri</h2>
+
+<div class="gallery">
+
+<img src="images/pool.jpg">
+<img src="images/gym.jpg">
+<img src="images/view.jpg">
+<img src="images/kamar.jpg">
+
+</div>
+
+</div>
+
+</section>
+
+<section id="harga">
+
+<div class="container">
+
+<h2 class="section-title">Harga</h2>
+
+<div class="price-box">
+
+<p>Mulai Dari</p>
+
+<h2>Rp350.000</h2>
+
+<p>per malam</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="lokasi">
+
+<div class="container">
+
+<h2 class="section-title">Lokasi</h2>
+
+<div class="location">
+
+<h3>VIDAVIEW Apartment</h3>
+
+<p>
+Jl. Topaz Raya, Kel. Masale,
+Kec. Panakkukang,
+Kota Makassar,
+Sulawesi Selatan 90215
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<img src="images/logo.png" width="100">
+
+<h2>VIDAVIEW by Ducs</h2>
+
+<p>Premium Apartment Stay in Makassar</p>
+
+<br>
+
+<p>WhatsApp: 081649508066</p>
+
+</footer>
+
+<a class="floating-wa"
+href="https://wa.me/6281649508066"
+target="_blank">
+💬 Chat WhatsApp
+</a>
+
+</body>
+</html>
