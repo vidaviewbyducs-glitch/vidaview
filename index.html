@@ -4,306 +4,646 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VIDAVIEW by Ducs</title>
+<title>VIDAVIEW by Ducs | Premium Apartment Makassar</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-background:#fff;
-color:#222;
+    background:#ffffff;
+    color:#1d2939;
+    overflow-x:hidden;
 }
 
 :root{
---primary:#25B8C8;
---secondary:#179CAC;
+    --primary:#20b8c9;
+    --primary-dark:#1196a7;
+    --dark:#102a43;
+    --light:#f4fbfc;
+    --white:#ffffff;
 }
 
 .container{
-width:90%;
-max-width:1200px;
-margin:auto;
+    width:90%;
+    max-width:1200px;
+    margin:auto;
 }
 
+/* ================= NAVBAR ================= */
+
 header{
-position:fixed;
-width:100%;
-background:#fff;
-z-index:1000;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+    box-shadow:0 3px 20px rgba(0,0,0,.08);
 }
 
 nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 0;
+    min-height:80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
 }
 
 .logo{
-height:70px;
+    height:58px;
+    width:auto;
+    object-fit:contain;
 }
 
 .menu{
-display:flex;
-gap:30px;
+    display:flex;
+    gap:30px;
+    align-items:center;
 }
 
 .menu a{
-text-decoration:none;
-color:#333;
-font-weight:500;
+    text-decoration:none;
+    color:#263238;
+    font-weight:500;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:var(--primary);
 }
 
 .wa-btn{
-background:var(--primary);
-color:white;
-padding:12px 24px;
-border-radius:40px;
-text-decoration:none;
-font-weight:600;
+    background:var(--primary);
+    color:white;
+    padding:13px 25px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(32,184,201,.25);
 }
 
+.wa-btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-3px);
+}
+
+/* ================= HERO ================= */
+
 .hero{
-height:100vh;
-background:
-linear-gradient(rgba(0,90,100,.65),rgba(0,90,100,.65)),
-url('sdsc.jpg');
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-color:white;
+    min-height:100vh;
+    background:
+    linear-gradient(
+        90deg,
+        rgba(5,40,48,.85),
+        rgba(5,40,48,.35)
+    ),
+    url('vida-view-makassar_1 (1).jpg');
+
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    color:white;
+    padding-top:80px;
 }
 
 .hero-content{
-max-width:650px;
+    max-width:700px;
+}
+
+.hero-tag{
+    display:inline-block;
+    background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.3);
+    padding:8px 18px;
+    border-radius:50px;
+    margin-bottom:20px;
+    font-size:14px;
 }
 
 .hero h1{
-font-size:72px;
-line-height:1;
-margin-bottom:15px;
+    font-size:70px;
+    line-height:1.05;
+    margin-bottom:20px;
+    font-weight:800;
 }
 
 .hero p{
-font-size:18px;
-margin:20px 0;
+    font-size:18px;
+    line-height:1.8;
+    max-width:600px;
+    margin-bottom:20px;
 }
 
 .price{
-font-size:48px;
-font-weight:700;
-color:#4de0ef;
+    font-size:36px;
+    font-weight:700;
+    color:#6ff3ff;
+    margin:20px 0;
 }
 
 .btn{
-display:inline-block;
-margin-top:20px;
-padding:15px 30px;
-background:var(--primary);
-color:white;
-text-decoration:none;
-border-radius:50px;
-font-weight:600;
+    display:inline-block;
+    margin-top:10px;
+    padding:15px 32px;
+    background:var(--primary);
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
 }
 
+.btn:hover{
+    background:#ffffff;
+    color:var(--primary);
+    transform:translateY(-3px);
+}
+
+/* ================= SECTION ================= */
+
 section{
-padding:80px 0;
+    padding:100px 0;
 }
 
 .section-title{
-text-align:center;
-font-size:36px;
-color:var(--primary);
-margin-bottom:40px;
+    text-align:center;
+    font-size:40px;
+    color:var(--dark);
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#667085;
+    max-width:600px;
+    margin:0 auto 50px;
+    line-height:1.7;
+}
+
+/* ================= FACILITIES ================= */
+
+#fasilitas{
+    background:#f8fcfd;
 }
 
 .features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
 .card{
-background:#fff;
-padding:30px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
+    background:white;
+    padding:35px 25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    transition:.3s;
+    border:1px solid #edf4f5;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.card-icon{
+    font-size:45px;
+    margin-bottom:15px;
 }
 
 .card h3{
-margin-top:10px;
+    color:var(--dark);
+    margin-bottom:10px;
 }
 
+.card p{
+    color:#667085;
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* ================= GALERI ================= */
+
 .gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.gallery-item{
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+    height:320px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
 }
 
 .gallery img{
-width:100%;
-height:250px;
-object-fit:cover;
-border-radius:15px;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+.gallery-overlay{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    padding:25px;
+    color:white;
+    background:linear-gradient(transparent,rgba(0,0,0,.75));
+}
+
+/* ================= HARGA ================= */
+
+#harga{
+    background:#f8fcfd;
 }
 
 .price-box{
-background:linear-gradient(135deg,var(--primary),var(--secondary));
-color:white;
-padding:40px;
-border-radius:20px;
-text-align:center;
-max-width:450px;
-margin:auto;
+    background:
+    linear-gradient(
+        135deg,
+        rgba(32,184,201,.95),
+        rgba(17,150,167,.95)
+    );
+
+    color:white;
+    padding:55px 30px;
+    border-radius:30px;
+    text-align:center;
+    max-width:550px;
+    margin:auto;
+    box-shadow:0 20px 50px rgba(32,184,201,.25);
+}
+
+.price-box p{
+    font-size:16px;
 }
 
 .price-box h2{
-font-size:50px;
+    font-size:55px;
+    margin:10px 0;
 }
+
+.price-box .book-price{
+    display:inline-block;
+    margin-top:25px;
+    background:white;
+    color:var(--primary-dark);
+    padding:13px 30px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* ================= LOKASI ================= */
 
 .location{
-background:#f5fcfd;
-padding:30px;
-border-radius:20px;
+    background:#f8fcfd;
+    padding:40px;
+    border-radius:25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
 }
+
+.location-info{
+    flex:1;
+}
+
+.location h3{
+    font-size:26px;
+    color:var(--dark);
+    margin-bottom:15px;
+}
+
+.location p{
+    color:#667085;
+    line-height:1.8;
+}
+
+.map-btn{
+    display:inline-block;
+    margin-top:20px;
+    background:var(--primary);
+    color:white;
+    padding:13px 25px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    background:
+    linear-gradient(
+        rgba(5,40,48,.85),
+        rgba(5,40,48,.85)
+    ),
+    url('vida-view-makassar_1 (2).jpg');
+
+    background-size:cover;
+    background-position:center;
+    text-align:center;
+    color:white;
+}
+
+.cta h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    margin-bottom:25px;
+}
+
+/* ================= FOOTER ================= */
 
 footer{
-background:linear-gradient(135deg,var(--primary),var(--secondary));
-color:white;
-padding:50px 20px;
-text-align:center;
+    background:#102a43;
+    color:white;
+    padding:50px 20px;
+    text-align:center;
 }
+
+footer img{
+    width:100px;
+    margin-bottom:15px;
+}
+
+footer p{
+    color:#cbd5e1;
+    margin-top:10px;
+}
+
+/* ================= WHATSAPP ================= */
 
 .floating-wa{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-padding:15px 25px;
-border-radius:50px;
-text-decoration:none;
-font-weight:600;
-box-shadow:0 5px 20px rgba(0,0,0,.2);
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    background:#25D366;
+    color:white;
+    padding:16px 25px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+    z-index:999;
+    transition:.3s;
 }
 
-@media(max-width:768px){
-
-.menu{
-display:none;
+.floating-wa:hover{
+    transform:translateY(-5px);
 }
 
-.hero h1{
-font-size:48px;
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+    .menu{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .features{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .location{
+        flex-direction:column;
+        align-items:flex-start;
+    }
 }
 
-.price{
-font-size:36px;
-}
+@media(max-width:600px){
 
+    nav{
+        min-height:70px;
+    }
+
+    .logo{
+        height:48px;
+    }
+
+    .wa-btn{
+        padding:10px 15px;
+        font-size:12px;
+    }
+
+    .hero{
+        min-height:100vh;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .price{
+        font-size:28px;
+    }
+
+    section{
+        padding:70px 0;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-item{
+        height:250px;
+    }
+
+    .price-box h2{
+        font-size:40px;
+    }
+
+    .cta h2{
+        font-size:30px;
+    }
+
+    .floating-wa{
+        bottom:15px;
+        right:15px;
+        padding:13px 18px;
+        font-size:13px;
+    }
 }
 
 </style>
-
 </head>
+
 <body>
 
+<!-- NAVBAR -->
+
 <header>
+
 <div class="container">
+
 <nav>
 
-<img src="logo vida.png" class="logo">
+<img src="logo vida.png" class="logo" alt="Logo VIDAVIEW">
 
 <div class="menu">
+
 <a href="#home">Beranda</a>
 <a href="#fasilitas">Fasilitas</a>
 <a href="#galeri">Galeri</a>
 <a href="#harga">Harga</a>
 <a href="#lokasi">Lokasi</a>
+
 </div>
 
 <a class="wa-btn"
 href="https://wa.me/6281649508066"
 target="_blank">
+
 Booking WhatsApp
+
 </a>
 
 </nav>
+
 </div>
+
 </header>
+
+
+<!-- HERO -->
 
 <section class="hero" id="home">
 
 <div class="container">
+
 <div class="hero-content">
 
-<h1>VIDAVIEW<br>by Ducs</h1>
+<span class="hero-tag">
+🏨 Premium Apartment Stay in Makassar
+</span>
+
+<h1>
+VIDAVIEW<br>
+by Ducs
+</h1>
 
 <p>
-Premium Apartment Stay in Makassar
-dengan fasilitas lengkap dan lokasi strategis.
+Nikmati pengalaman menginap yang nyaman,
+modern, dan berkelas di lokasi strategis
+Kota Makassar.
 </p>
 
 <div class="price">
-Rp350.000 / malam
+Mulai Rp350.000 / malam
 </div>
 
 <a href="https://wa.me/6281649508066"
 target="_blank"
 class="btn">
-Booking Sekarang
+
+Booking Sekarang → 
+
 </a>
 
 </div>
+
 </div>
 
 </section>
+
+
+<!-- FASILITAS -->
 
 <section id="fasilitas">
 
 <div class="container">
 
-<h2 class="section-title">Fasilitas</h2>
+<h2 class="section-title">
+Fasilitas Premium
+</h2>
+
+<p class="section-subtitle">
+Semua yang kamu butuhkan untuk menikmati
+pengalaman menginap yang nyaman dan menyenangkan.
+</p>
 
 <div class="features">
 
 <div class="card">
-<h3>🏊 Kolam Renang</h3>
+<div class="card-icon">🏊</div>
+<h3>Kolam Renang</h3>
+<p>Area kolam renang untuk bersantai dan menikmati waktu liburan.</p>
 </div>
 
 <div class="card">
-<h3>🏋️ Gym</h3>
+<div class="card-icon">🏋️</div>
+<h3>Gym</h3>
+<p>Fasilitas olahraga untuk menjaga kebugaran selama menginap.</p>
 </div>
 
 <div class="card">
-<h3>📶 WiFi & Netflix</h3>
+<div class="card-icon">📶</div>
+<h3>WiFi & Netflix</h3>
+<p>Nikmati koneksi internet dan hiburan untuk waktu santai.</p>
 </div>
 
 <div class="card">
-<h3>❄️ AC</h3>
+<div class="card-icon">❄️</div>
+<h3>AC</h3>
+<p>Ruangan nyaman dengan pendingin udara untuk kenyamanan maksimal.</p>
 </div>
 
 <div class="card">
-<h3>🍽️ Dapur Lengkap</h3>
+<div class="card-icon">🍽️</div>
+<h3>Dapur Lengkap</h3>
+<p>Fasilitas dapur untuk menyiapkan makanan dan minuman sendiri.</p>
 </div>
 
 <div class="card">
-<h3>🔐 Keamanan 24 Jam</h3>
+<div class="card-icon">🔐</div>
+<h3>Keamanan 24 Jam</h3>
+<p>Keamanan sepanjang waktu agar kamu bisa beristirahat dengan tenang.</p>
 </div>
 
 </div>
@@ -311,19 +651,51 @@ Booking Sekarang
 </div>
 
 </section>
+
+
+<!-- GALERI -->
 
 <section id="galeri">
 
 <div class="container">
 
-<h2 class="section-title">Galeri</h2>
+<h2 class="section-title">
+Galeri
+</h2>
+
+<p class="section-subtitle">
+Lihat suasana dan kenyamanan VIDAVIEW by Ducs.
+</p>
 
 <div class="gallery">
 
-<img src="vida-view-makassar_l (1).jpg">
-<img src="vida-view-makassar_l (2).jpg">
-<img src="vida-view-makassar_l (4).jpg">
-<img src="sdsc.jpg">
+<div class="gallery-item">
+<img src="vida-view-makassar_1 (1).jpg" alt="Vida View Makassar">
+<div class="gallery-overlay">
+<h3>Vida View Makassar</h3>
+</div>
+</div>
+
+<div class="gallery-item">
+<img src="vida-view-makassar_1 (2).jpg" alt="Vida View Apartment">
+<div class="gallery-overlay">
+<h3>Premium Apartment</h3>
+</div>
+</div>
+
+<div class="gallery-item">
+<img src="logo vida.png" alt="VIDAVIEW by Ducs">
+<div class="gallery-overlay">
+<h3>VIDAVIEW by Ducs</h3>
+</div>
+</div>
+
+<div class="gallery-item">
+<img src="vida-view-makassar_1 (1).jpg" alt="Apartment Makassar">
+<div class="gallery-overlay">
+<h3>Comfortable Stay</h3>
+</div>
+</div>
 
 </div>
 
@@ -331,11 +703,20 @@ Booking Sekarang
 
 </section>
 
+
+<!-- HARGA -->
+
 <section id="harga">
 
 <div class="container">
 
-<h2 class="section-title">Harga</h2>
+<h2 class="section-title">
+Harga Menginap
+</h2>
+
+<p class="section-subtitle">
+Nikmati pengalaman menginap nyaman dengan harga yang terjangkau.
+</p>
 
 <div class="price-box">
 
@@ -345,21 +726,40 @@ Booking Sekarang
 
 <p>per malam</p>
 
+<a href="https://wa.me/6281649508066"
+target="_blank"
+class="book-price">
+
+Tanya Ketersediaan
+
+</a>
+
 </div>
 
 </div>
 
 </section>
 
+
+<!-- LOKASI -->
+
 <section id="lokasi">
 
 <div class="container">
 
-<h2 class="section-title">Lokasi</h2>
+<h2 class="section-title">
+Lokasi Strategis
+</h2>
+
+<p class="section-subtitle">
+Temukan kami di kawasan strategis Kota Makassar.
+</p>
 
 <div class="location">
 
-<h3>VIDAVIEW Apartment</h3>
+<div class="location-info">
+
+<h3>📍 VIDAVIEW Apartment</h3>
 
 <p>
 Jl. Topaz Raya, Kel. Masale,
@@ -368,30 +768,81 @@ Kota Makassar,
 Sulawesi Selatan 90215
 </p>
 
+<a
+href="https://www.google.com/maps/search/?api=1&query=VIDAVIEW+Apartment+Makassar"
+target="_blank"
+class="map-btn">
+
+Buka Google Maps →
+
+</a>
+
+</div>
+
 </div>
 
 </div>
 
 </section>
 
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+Siap Menikmati Stay yang Nyaman?
+</h2>
+
+<p>
+Booking sekarang dan nikmati pengalaman menginap
+di VIDAVIEW by Ducs.
+</p>
+
+<a href="https://wa.me/6281649508066"
+target="_blank"
+class="btn">
+
+💬 Booking via WhatsApp
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
 <footer>
 
-<img src="logo vida.png" width="100">
+<img src="logo vida.png" alt="Logo VIDAVIEW">
 
-<h2>VIDAVIEW by Ducs</h2>
+<h2>
+VIDAVIEW by Ducs
+</h2>
 
-<p>Premium Apartment Stay in Makassar</p>
+<p>
+Premium Apartment Stay in Makassar
+</p>
 
-<br>
-
-<p>WhatsApp: 081649508066</p>
+<p>
+WhatsApp: 081649508066
+</p>
 
 </footer>
+
+
+<!-- FLOATING WHATSAPP -->
 
 <a class="floating-wa"
 href="https://wa.me/6281649508066"
 target="_blank">
+
 💬 Chat WhatsApp
+
 </a>
 
 </body>
